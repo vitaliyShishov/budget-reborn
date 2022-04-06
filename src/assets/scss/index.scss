@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fontsource/londrina-solid';
+
+@import './general/reset';
+@import './general/base';
+
+.londrina {
+  @apply font-londrina;
+}
