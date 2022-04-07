@@ -8,17 +8,17 @@ function App() {
   const currentRouteId = ''
   return (
     <div className="app relative flex flex-col">
-      <Header {...{ currentRouteId }} />
-      <div className="flex flex-1 flex-col items-start content-holder">
-        <Router>
+      <Router>
+        <Header {...{ currentRouteId }} />
+        <div className="flex flex-1 flex-col items-start content-holder">
           <Routes>
-            <Route path="/" element={<WoonkamerPage />} />
+            <Route path="/" element={<Welcome />} />
             <Route path="/bespaarweken" element={<Bespaarweken />} />
-            <Route path="/welcome" element={<Welcome />} />
+            <Route path="/wookamer" element={<WoonkamerPage />} />
           </Routes>
-        </Router>
-      </div>
-      <Footer />
+        </div>
+        <Footer />
+      </Router>
     </div>
   )
 }
