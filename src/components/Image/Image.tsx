@@ -1,13 +1,19 @@
 type ImageProps = {
   src: string
   altText: string
+  height?: number
+  width?: number
 }
 
-const Image = ({ src, altText }: ImageProps) => {
+const Image = ({ src, altText, ...rest }: ImageProps) => {
   return (
-    <div className="my-4">
-      <img className="w-auto h-full max-w-[500px]" src={src} alt={altText} />
-    </div>
+    <img
+      {...{
+        src: src,
+        alt: altText,
+        ...rest,
+      }}
+    />
   )
 }
 

@@ -16,6 +16,9 @@ module.exports = {
       boxShadow: {
         'link-button': '0 8px 0 -4px #007db7',
       },
+      transitionProperty: {
+        height: 'height',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],

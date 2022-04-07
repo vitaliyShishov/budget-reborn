@@ -59,7 +59,7 @@ const HeaderSubMenu = ({
         return (
           <span
             key={i}
-            className="text-white text-lg px-6 cursor-pointer hover:underline"
+            className="text-white text-sm px-6 cursor-pointer hover:underline"
           >
             {childRoute.title}
           </span>
@@ -78,7 +78,7 @@ const Header = ({ currentRouteId }: HeaderProps) => {
   }, [activeRouteId])
 
   return (
-    <header className="sticky inset-0 bg-white shadow-md">
+    <header className="sticky inset-0 bg-white shadow-md z-20">
       <div className="flex items-center px-4 space-x-8 relative">
         <img src={BudgetLogo} className="inline-flex h-[50px] w-[90px]"></img>
         <div className="flex flex-1">

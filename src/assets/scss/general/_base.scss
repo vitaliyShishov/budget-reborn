@@ -5,3 +5,30 @@
 .container {
   max-width: 1000px;
 }
+
+.content-holder {
+  section {
+    &.bg-budget-green-500 + section {
+      position: relative;
+      &::after {
+        top: 0px;
+        left: 0;
+        height: 30px;
+        background-image: url(src/assets/images/cookie-rip.svg);
+        background-position: top -1px left -30px;
+        background-repeat: repeat-x;
+        background-size: 4000px 30px;
+        position: absolute;
+        content: '';
+        width: 100%;
+        z-index: 10;
+      }
+    }
+    &.bg-budget-green-img {
+      background-image: url(src/assets/images/green-campaign-banner.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+  }
+}

@@ -84,6 +84,7 @@ const WoonkamerPage = () => {
             {...{
               src: 'http://localhost:3000/src/assets/images/budgetThuisSweater.jpg',
               altText: 'Budget Winner',
+              width: 500,
             }}
           />
           <Quote
@@ -174,6 +175,8 @@ const WoonkamerPage = () => {
             {...{
               src: 'http://localhost:3000/src/assets/images/budgetThuisHappyCustomer.jpg',
               altText: 'Budget Winner',
+              width: 500,
+              className: 'my-6',
             }}
           />
           <Quote
@@ -209,7 +212,7 @@ const WoonkamerPage = () => {
       </Section>
       <Section {...{ classes: 'bg-gray-100' }}>
         <div className="flex">
-          <div className="flex flex-col items-start py-6">
+          <div className="flex flex-1 flex-col items-start py-6">
             <Title.H2
               {...{
                 color: 'green',
@@ -251,12 +254,16 @@ const WoonkamerPage = () => {
               />
             </div>
           </div>
-          <Image
-            {...{
-              src: 'http://localhost:3000/src/assets/images/combikorting_budget_energie.png',
-              altText: 'Budget Winner',
-            }}
-          />
+          <div className="flex-1">
+            <Image
+              {...{
+                src: 'http://localhost:3000/src/assets/images/combikorting_budget_energie.png',
+                altText: 'Budget Winner',
+                className: 'flex-1',
+                width: 500,
+              }}
+            />
+          </div>
         </div>
       </Section>
     </>

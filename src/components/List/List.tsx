@@ -21,8 +21,10 @@ const List = ({ type, items }: ListProps) => {
             <span>
               {type === 'numbered' ? (
                 `${i + 1}.`
-              ) : (
+              ) : item.isCountable ? (
                 <CheckIcon className="text-budget-green-500 h-6 w-6" />
+              ) : (
+                <i className="h-6 w-6 block"></i>
               )}
             </span>
             <span>{item.text}</span>
