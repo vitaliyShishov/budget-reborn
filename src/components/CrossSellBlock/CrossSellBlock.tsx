@@ -15,7 +15,7 @@ const CrossSellBlock = () => {
               src: 'src/assets/images/logo-allInOne-payoff.svg',
               altText: '',
               width: 100,
-              className: 'bg-white border-4 border-solid border-white',
+              className: 'bg-white border-4 border-solid border-white'
             }}
           />
         </div>
@@ -24,7 +24,7 @@ const CrossSellBlock = () => {
             {...{
               interactive: false,
               text: 'Bekijk aanbod',
-              link: 'https://google.com',
+              link: 'https://google.com'
             }}
           />
         </div>
@@ -34,7 +34,7 @@ const CrossSellBlock = () => {
           {...{
             content: 'Internet, TV & BELLEN',
             color: 'black',
-            classes: 'mt-16',
+            classes: 'mt-16'
           }}
         />
         <div className="flex my-6 space-x-4 justify-center">
@@ -49,17 +49,17 @@ const CrossSellBlock = () => {
               items: [
                 {
                   text: '6 mnd vanaf € 17,- p/m',
-                  isCountable: true,
+                  isCountable: true
                 },
                 {
                   text: 'óf kies cadeau tot € 260,-',
-                  isCountable: false,
+                  isCountable: false
                 },
                 {
                   text: 'Via betrouwbaar KPN-netwerk',
-                  isCountable: true,
-                },
-              ],
+                  isCountable: true
+                }
+              ]
             }}
           />
         </div>
