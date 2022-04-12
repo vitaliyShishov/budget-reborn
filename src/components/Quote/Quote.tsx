@@ -1,13 +1,13 @@
 type QuoteProps = {
-  text: string
+  content: string
   author: string
 }
 
-const Quote = ({ text, author }: QuoteProps) => {
+const Quote = ({ content, author }: QuoteProps) => {
   return (
     <div className="my-4 londrina text-xl space-y-2">
-      <p className="uppercase">{text}</p>
-      <p className="uppercase">{author}</p>
+      <p className="uppercase">{content}</p>
+      <p className="uppercase">- {author}</p>
     </div>
   )
 }

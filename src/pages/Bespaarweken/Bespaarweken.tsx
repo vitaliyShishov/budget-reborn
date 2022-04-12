@@ -47,81 +47,95 @@ const Bespaarweken = ({ setHideLayouts }: PageProps) => {
   }, [])
   return (
     <>
-      <Section {...{ classes: 'bg-budget-green-500' }}>
+      <Section {...{ sectionBackground: 'green', blocks: [] }}>
         <Title
           {...{
             color: 'white',
-            content: 'BUDGET THUIS BESPAARWEKEN'
+            content: 'BUDGET THUIS BESPAARWEKEN',
+            size: 'h1'
           }}
         />
       </Section>
-      <Section>
+      <Section {...{ sectionBackground: 'white', blocks: [] }}>
         <>
           <DateStamp {...{ title: 'Budget Thuis', datetime: '23 februari 2022' }} />
-          <Title.H2
+          <Title
             {...{
               color: 'green',
-              content: 'WAAROM TEVEEL BETALEN VOOR VASTE LASTEN?'
+              content: 'WAAROM TEVEEL BETALEN VOOR VASTE LASTEN?',
+              size: 'h2'
             }}
           />
-          <Paragraph.Text
+          <Paragraph
             {...{
               content:
                 'Inflatie. Een vaak gehoorde term in deze tijd. En niet voor niets, want de inflatie is het hoogst in 40 jaar (CBS, dec ’21). Dit betekent dat je minder kunt kopen voor je euro’s, omdat de prijzen van goederen en diensten zijn gestegen. En, dat kan best vervelend uitpakken. Want hoogstwaarschijnlijk zijn je inkomsten niet net zo hard meegestegen.'
             }}
           />
-          <Paragraph.Text
+          <Paragraph
             {...{
               content:
                 'Naast dat de energieprijzen gestegen zijn voor een groep mensen, geldt dit ook voor de basisbehoeften zoals boodschappen, brandstof, de zorgverzekering en huisvesting. Iedereen voelt dit in de portemonnee.'
             }}
           />
-          <Paragraph.Text
+          <Paragraph
             {...{
               content:
                 'Mensen gaan daarom op zoek naar manieren om slimmer met hun geld om te gaan. Ze speuren naar aanbiedingen en kortingscodes, de verwarming wordt een graad lager gezet, er wordt zuinig omgegaan met water en slimme deals worden gescoord. Andere uitgaves waar vaak nog vrij gemakkelijk op bespaard kan worden? De vaste lasten en abonnementen.'
             }}
           />
-          <Paragraph.Title
+          <Title
             {...{
-              content: 'Bespaar op je vaste lasten'
+              content: 'BESPAARWEKEN',
+              color: 'green',
+              size: 'h2',
+              classes:
+                'text-center mt-0 mb-0 inline-flex border-4 border-solid border-white bg-white'
             }}
           />
-          <Paragraph.Text
+          <Paragraph
             {...{
               content:
                 'Op vaste lasten en abonnementen, daar is wat ons betreft met gemak op te besparen. Waarom teveel betalen voor producten die gewoon moeten werken en waarbij vaak het enige verschil de prijs is? Want bellen is bellen, en internetten is internetten. Zou je zeggen. Waarom dan teveel betalen voor je internetpakket en GB’s, toch?'
             }}
           />
-          <Paragraph.Title
+          <Title
             {...{
-              content: 'Bespaarweken'
+              content: 'BESPAARWEKEN',
+              color: 'green',
+              size: 'h2',
+              classes:
+                'text-center mt-0 mb-0 inline-flex border-4 border-solid border-white bg-white'
             }}
           />
-          <Paragraph.Text
+          <Paragraph
             {...{
               content:
                 'De uitgaves op een rijtje? Dan is het nu tijd om eens de vergelijking te maken met ons aanbod. Bij Budget Thuis zijn er nu de Bespaarweken. Internet en tv kan al vanaf € 17,- per maand als je kiest voor korting. En onbeperkt bellen, sms’en en internet? Dat kan de eerste 3 maanden al vanaf € 15,- per maand als je kiest voor een 2-jarig abonnement. En tel daar ook nog eens een cadeau naar keuze bij op!'
             }}
           />
-          <Paragraph.Text
+          <Paragraph
             {...{
               content:
                 '<a href="https://google.com" class="text-budget-green-500 underline">Bekijk Budget Alles-in-1 aanbod</a>'
             }}
           />
-          <Paragraph.Text
+          <Paragraph
             {...{
               content:
                 '<a href="https://google.com" class="text-budget-green-500 underline">Bekijk Budget Mobiel aanbod</a>'
             }}
           />
-          <Paragraph.Title
+          <Title
             {...{
-              content: 'Combikorting'
+              content: 'BESPAARWEKEN',
+              color: 'green',
+              size: 'h2',
+              classes:
+                'text-center mt-0 mb-0 inline-flex border-4 border-solid border-white bg-white'
             }}
           />
-          <Paragraph.Text
+          <Paragraph
             {...{
               content:
                 'Bijkomend voordeel is dat als je onze producten (Budget Energie, Alles-in-1 en Mobiel) combineert, je tot maar liefst € 360,- per jaar kan besparen. En dat bovenop de al lage prijzen van Internet & TV en Sim Only. Een slimme manier om ondanks de stijgende prijzen toch geld te besparen op je vaste lasten.'
@@ -129,13 +143,14 @@ const Bespaarweken = ({ setHideLayouts }: PageProps) => {
           />
         </>
       </Section>
-      <Section {...{ classes: 'bg-budget-green-img' }}>
+      <Section {...{ sectionBackground: 'green-image', blocks: [] }}>
         <>
           <div className="flex flex-col w-full items-center">
             <Title
               {...{
                 content: 'BESPAARWEKEN',
                 color: 'green',
+                size: 'h2',
                 classes:
                   'text-center mt-0 mb-0 inline-flex border-4 border-solid border-white bg-white'
               }}
@@ -144,13 +159,14 @@ const Bespaarweken = ({ setHideLayouts }: PageProps) => {
               {...{
                 content: 'BIJ BUDGET THUIS',
                 color: 'green',
+                size: 'h2',
                 classes:
                   'text-center mt-0 mb-0 inline-flex border-4 border-solid border-white bg-white'
               }}
             />
           </div>
           <div className="text-white text-center my-8">
-            <Paragraph.Text
+            <Paragraph
               {...{
                 content:
                   'Internet en tv. Mobiel bellen. Diensten die gewoon moeten werken. Het liefst voor een zo laag mogelijke prijs. Profiteer nu van superscherpe acties én combikorting!'
@@ -163,31 +179,35 @@ const Bespaarweken = ({ setHideLayouts }: PageProps) => {
           </div>
         </>
       </Section>
-      <Section>
-        <Harmonica
-          {...{
-            lines: HarmonicaLines
-          }}
-        />
+      <Section {...{ sectionBackground: 'white', blocks: [] }}>
+        <>
+          <Harmonica
+            {...{
+              lines: HarmonicaLines
+            }}
+          />
+        </>
       </Section>
-      <Section {...{ classes: 'bg-gray-100' }}>
+      <Section {...{ sectionBackground: 'gray', blocks: [] }}>
         <div className="flex py-6">
           <div className="flex flex-col items-start flex-1">
-            <Title.H2
+            <Title
               {...{
                 color: 'green',
                 content: 'ELKE MAAND € 5,- COMBIKORTING',
-                classes: 'mb-2'
+                classes: 'mb-2',
+                size: 'h2'
               }}
             />
-            <Title.H3
+            <Title
               {...{
                 color: 'black',
                 content: 'Combineer Budget Mobiel met Energie en Alles-in-1',
-                classes: 'mt-0'
+                classes: 'mt-0',
+                size: 'h3'
               }}
             />
-            <Paragraph.Text
+            <Paragraph
               {...{
                 content:
                   'Budget Thuis is er voor de nuchtere Nederlander die niet in mooie praatjes gelooft en niet te veel wil betalen. Wij beloven minder: minder betalen, minder gedoe en minder blabla. Combineer je Budget Energie met Budget Alles-in-1 en Budget Mobiel? Dan krijg je bovenop de lage prijs nog eens elke maand minimaal € 5,- combikorting. Wat kan oplopen tot € 30,- per maand. En wel zo handig. Je energie- en telecomdiensten onder één dak.'
@@ -196,20 +216,20 @@ const Bespaarweken = ({ setHideLayouts }: PageProps) => {
             <div className="flex flex-wrap justify-between w-full mt-4">
               <LinkButton
                 {...{
-                  text: 'Energie',
-                  link: 'https://google.com'
+                  content: 'Energie',
+                  url: 'https://google.com'
                 }}
               />
               <LinkButton
                 {...{
-                  text: 'All-in-1',
-                  link: 'https://google.com'
+                  content: 'All-in-1',
+                  url: 'https://google.com'
                 }}
               />
               <LinkButton
                 {...{
-                  text: 'Mobiel',
-                  link: 'https://google.com'
+                  content: 'Mobiel',
+                  url: 'https://google.com'
                 }}
               />
             </div>

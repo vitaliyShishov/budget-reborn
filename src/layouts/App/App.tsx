@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from '../Header'
 import Footer from '../Footer'
-import WoonkamerPage from '@pages/Woonkamer'
 import Bespaarweken from '@pages/Bespaarweken'
 import Welcome from '@pages/Welcome'
+import StaticPageBuilder from '@pages/StaticPageBuilder'
 function App() {
   const [hideLayouts, setHideLayouts] = useState<Boolean>(false)
   const currentRouteId = ''
@@ -20,8 +20,8 @@ function App() {
               element={<Bespaarweken setHideLayouts={setHideLayouts} />}
             />
             <Route
-              path="/wookamer"
-              element={<WoonkamerPage setHideLayouts={setHideLayouts} />}
+              path="/articles/:slug"
+              element={<StaticPageBuilder setHideLayouts={setHideLayouts} />}
             />
           </Routes>
         </div>

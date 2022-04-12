@@ -1,5 +1,6 @@
 import { useEffect, useState, Dispatch, SetStateAction } from 'react'
 import LinkButton from '@components/LinkButton'
+import request from '../../utils/api-call'
 
 type WelcomeProps = {
   setHideLayouts: Dispatch<SetStateAction<Boolean>>
@@ -10,7 +11,18 @@ const Welcome = ({ setHideLayouts }: WelcomeProps) => {
   const [placeToType, setPlaceToType] = useState<any>(null)
   const [wordToShow, setWordToShow] = useState<string>('')
   const [isButtonsVisible, setIsButtonsVisible] = useState<boolean>(false)
+  const [availablePages, setAvailablePages] = useState<Array<any>>([])
   const phrase = 'Welcome to Budget Thuis Reborn Project'
+
+  useEffect(() => {
+    request({
+      url: 'http://localhost:1337/api/articles',
+      method: 'GET',
+      params: {
+        fields: ['seo_url', 'article_title']
+      }
+    }).then(response => setAvailablePages(response))
+  }, [])
 
   useEffect(() => {
     setHideLayouts(true)
@@ -46,18 +58,17 @@ const Welcome = ({ setHideLayouts }: WelcomeProps) => {
         </span>
         {isButtonsVisible && (
           <>
-            <LinkButton
-              {...{
-                text: 'Visit the first page',
-                link: 'http://localhost:3000/bespaarweken'
-              }}
-            />
-            <LinkButton
-              {...{
-                text: 'Visit the second page',
-                link: 'http://localhost:3000/wookamer'
-              }}
-            />
+            {availablePages.map((pageData, i) => {
+              return (
+                <LinkButton
+                  {...{
+                    key: i,
+                    content: pageData.attributes.articleTitle,
+                    url: `/articles/${pageData.attributes.seoUrl}`
+                  }}
+                />
+              )
+            })}
           </>
         )}
       </div>

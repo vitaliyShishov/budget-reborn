@@ -6,7 +6,7 @@ type DateStampProps = {
 const DateStamp = ({ title, datetime }: DateStampProps) => {
   return (
     <div className="w-full space-x-4">
-      <span className="font-semibold">{title}</span>
+      <span className="font-semibold capitalize">{title}</span>
       <span className="text-gray-400">{datetime}</span>
     </div>
   )

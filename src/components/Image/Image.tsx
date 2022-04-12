@@ -11,7 +11,8 @@ const Image = ({ src, altText, ...rest }: ImageProps) => {
       {...{
         src: src,
         alt: altText,
-        ...rest,
+        className: 'w-1/2 my-8',
+        ...rest
       }}
     />
   )

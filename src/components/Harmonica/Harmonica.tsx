@@ -1,6 +1,7 @@
 import { useState, useLayoutEffect } from 'react'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import Paragraph from '../Paragraph'
+
 type HarmonicaLineProps = {
   text: string
   content: string
@@ -10,12 +11,7 @@ type HarmonicaProps = {
   lines: Array<HarmonicaLineProps>
 }
 
-type styleType =
-  | 'height'
-  | 'marginTop'
-  | 'marginBottom'
-  | 'paddingTop'
-  | 'paddingBottom'
+type styleType = 'height' | 'marginTop' | 'marginBottom' | 'paddingTop' | 'paddingBottom'
 
 const getElementHeightToSet = (contentRef: HTMLDivElement) => {
   const height = (
@@ -24,7 +20,7 @@ const getElementHeightToSet = (contentRef: HTMLDivElement) => {
       'marginTop',
       'marginBottom',
       'paddingTop',
-      'paddingBottom',
+      'paddingBottom'
     ] as Array<styleType>
   ).reduce((acc, styleProp: styleType) => {
     acc += parseInt(window.getComputedStyle(contentRef)[styleProp], 10)
@@ -77,11 +73,8 @@ const HarmonicaLine = ({ text, content }: HarmonicaLineProps) => {
       </div>
 
       <div className="h-0 overflow-hidden transition-[height] duration-300">
-        <div
-          ref={setRefForContent}
-          className={`w-full my-4 overflow-hidden hidden`}
-        >
-          <Paragraph.Text {...{ content }} />
+        <div ref={setRefForContent} className={`w-full my-4 overflow-hidden hidden`}>
+          <Paragraph {...{ content }} />
         </div>
       </div>
     </>
@@ -95,7 +88,7 @@ const Harmonica = ({ lines }: HarmonicaProps) => {
         <HarmonicaLine
           {...{
             key: i,
-            ...line,
+            ...line
           }}
         />
       ))}

@@ -3,7 +3,7 @@ import { CheckIcon } from '@heroicons/react/solid'
 type ListItemsType = 'checked' | 'numbered'
 
 type ListItem = {
-  text: string
+  content: string
   isCountable: boolean
 }
 
@@ -27,7 +27,7 @@ const List = ({ type, items }: ListProps) => {
                 <i className="h-6 w-6 block"></i>
               )}
             </span>
-            <span>{item.text}</span>
+            <span>{item.content}</span>
           </li>
         )
       })}
