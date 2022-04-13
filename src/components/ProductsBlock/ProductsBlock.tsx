@@ -50,7 +50,7 @@ const ProductsBlock = () => {
           />
         </div>
       </div>
-      <div className="flex-1">
+      <div className="flex-1 flex items-center">
         <Image
           {...{
             src: 'http://localhost:3000/src/assets/images/combikorting_budget_energie.png',
